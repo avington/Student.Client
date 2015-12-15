@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/css/bootstrap.css">
+</head>
+<body>
+
+<div>
+    <ui-view></ui-view>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular-messages.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular-aria.js"></script>
+
+<!-- inject:js -->
+<script src="/src/app/app.module.js"></script>
+<script src="/src/app/home.module.js"></script>
+<script src="/src/app/app.routes.js"></script>
+<script src="/src/app/home/home.module.ts.js"></script>
+<script src="/src/app/home/controllers/home.controller.js"></script>
+<script src="/src/app/home/services/home.service.js"></script>
+<!-- endinject -->
+
+
+</body>
+</html>
