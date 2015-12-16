@@ -4,14 +4,23 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "live-server --open=src"
+    "start": "live-server --open=src",
+    "serve": "nodemon src/server/server.js localhost 8080"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "body-parser": "^1.14.1",
+    "express": "^4.13.3",
     "gulp": "^3.9.0",
+    "gulp-debug": "^2.1.2",
     "gulp-inject": "^3.0.0",
-    "live-server": "^0.9.0"
+    "live-server": "^0.9.0",
+    "method-override": "^2.3.5",
+    "mongoose": "^4.3.1",
+    "morgan": "^1.6.1",
+    "nodemon": "^1.8.1",
+    "serve-favicon": "^2.3.0"
   }
 }

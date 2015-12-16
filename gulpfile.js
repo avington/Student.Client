@@ -1,20 +1,23 @@
 var gulp = require('gulp');
 var inject = require('gulp-inject');
+var debug = require('gulp-debug');
 
-var src = './src/';
-var indexHtml = './src/index.html';
-var specHtml = './src/spec.html';
+var src = './src/client/';
+var indexHtml = './src/client/index.html';
+var specHtml = './src/client/spec.html';
+
 var js = [
-    './src/**/*.module.js',
-    './src/**/*.js',
-    '!./src/**/*.spec.js',
-    '!./src/**/*.mock.js'
+    './src/client/**/*.module.js',
+    './src/client/**/*.js',
+    '!./src/client/**/*.spec.js',
+    '!./src//client/**/*.mock.js'
 ];
+
 var specs = [
-    './src/**/*.module.js',
-    './src/**/*.js',
-    './src/**/*.spec.js',
-    './src/**/*.mock.js'
+    './src/client/**/*.module.js',
+    './src/client/**/*.js',
+    './src/client/**/*.spec.js',
+    './src/client/**/*.mock.js'
 ];
 
 gulp.task('inject:dev', function(){

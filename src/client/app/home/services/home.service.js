@@ -6,9 +6,9 @@
         var service = {
             getImages: function(){
                 //use angular $http to return a promise
-                return $http.get('http://localhost:61906/api/HomeImages');
+                return $http.get('http://localhost:8001/api/homeimages');
             }
-        }
+        };
 
         return service;
     }

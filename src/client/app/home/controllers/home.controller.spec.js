@@ -50,7 +50,7 @@ describe('CONTROLLER: HomeController', function () {
 
     it('should have a list of images returned from the image service', function(){
         // resolve the service
-        defer.resolve(homeImages);
+        defer.resolve({data: homeImages});
 
         // this is inportant, you need to tell angular to update the scope
         // to recognize the changes

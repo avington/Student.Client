@@ -6,8 +6,8 @@
 
         var vm = this;
 
-        var handleSuccess = function(data){
-            vm.images = data;
+        var handleSuccess = function(response){
+            vm.images = response.data;
         };
 
         var init = function(){
