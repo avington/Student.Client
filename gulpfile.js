@@ -37,3 +37,5 @@ gulp.task('inject:spec', function(){
         .pipe(inject(sources))
         .pipe(gulp.dest(src));
 });
+
+gulp.task('inject', ['inject:dev', 'inject:spec']);

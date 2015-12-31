@@ -30,9 +30,9 @@ function getPerson(req, res, next) {
 
 function getImages(req, res, next){
     var images = [
-        {id: 1, url: 'http://lorempixel.com/400/200/sports/1/', caption: 'this is image 1'},
-        {id: 2, url: 'http://lorempixel.com/400/200/sports/2/', caption: 'this is image 2'},
-        {id: 3, url: 'http://lorempixel.com/400/200/sports/3/', caption: 'this is image 3'}
+        {id: 1, url: 'http://lorempixel.com/400/200/sports/1/', caption: 'this is image 1', selected: true},
+        {id: 2, url: 'http://lorempixel.com/400/200/sports/2/', caption: 'this is image 2', selected: false},
+        {id: 3, url: 'http://lorempixel.com/400/200/sports/3/', caption: 'this is image 3',  selected: false}
     ];
 
     res.status(200).send(images);
