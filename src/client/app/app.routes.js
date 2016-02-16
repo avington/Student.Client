@@ -11,6 +11,7 @@
                     url: '/home',
                     controller: 'HomeController as vm',
                     templateUrl: 'app/home/templates/home.template.html'
+
                 }
             }
         ];

@@ -10,15 +10,15 @@
                 '<div class="jumbotron">',
                     '<div class="row">',
                         '<div class="col-md-1 pull-left">',
-                            '<button id="prevButton" class="btn btn-link" ng-click="prevClicked()">Prev</button>',
+                            '<button id="prevButton" class="btn btn-link" ng-click="vm.prevClicked()">Prev</button>',
                         '</div>',
                         '<div class="col-md-10">',
                             '<div class="carosel">',
-                                '<img class="img-fluid" src="{{images[0].url}}">',
+                                '<img class="img-fluid" ng-src="{{vm.images[0].url}}">',
                             '</div>',
                         '</div>',
                         '<div class="col-md-1 pull-right">',
-                            '<button id="nextButton" class="btn btn-link"  ng-click="nextClicked()">Next</button>',
+                            '<button id="nextButton" class="btn btn-link"  ng-click="vm.nextClicked()">Next</button>',
                         '</div>',
                     '</div>',
                 '</div>'
@@ -27,47 +27,50 @@
                 images: '='
             },
             link: function (scope, element, attrs) {
-
-                scope.prevClicked = function () {
+                var vm = scope.vm;
+                vm.prevClicked = function () {
                     var newIndex;
-                    var index = _.findIndex(scope.images, function (image) {
+                    var index = _.findIndex(vm.images, function (image) {
                         return image.selected
                     });
 
                     if (index === 0) {
-                        newIndex = scope.images.length - 1;
+                        newIndex = vm.images.length - 1;
                     } else {
                         newIndex = index - 1;
                     }
 
-                    _.forEach(scope.images, function (image) {
+                    _.forEach(vm.images, function (image) {
                         image.selected = false;
                     });
 
-                    scope.images[newIndex].selected = true;
-                    element.find('img').first().attr('src', scope.images[newIndex].url);
+                    vm.images[newIndex].selected = true;
+                    element.find('img').first().attr('src', vm.images[newIndex].url);
                 }
 
-                scope.nextClicked = function () {
+                vm.nextClicked = function () {
                     var newIndex;
-                    var index = _.findIndex(scope.images, function (image) {
+                    var index = _.findIndex(vm.images, function (image) {
                         return image.selected
                     });
 
-                    if (index === scope.images.length - 1) {
+                    if (index === vm.images.length - 1) {
                         newIndex = 0;
                     } else {
                         newIndex = index + 1;
                     }
 
-                    _.forEach(scope.images, function (image) {
+                    _.forEach(vm.images, function (image) {
                         image.selected = false;
                     });
 
-                    scope.images[newIndex].selected = true;
-                    element.find('img').first().attr('src', scope.images[newIndex].url);
+                    vm.images[newIndex].selected = true;
+                    element.find('img').first().attr('src', vm.images[newIndex].url);
                 }
-            }
+            },
+            controllerAs: 'vm',
+            bindToController: true,
+            controller: function(){}
         }
     }
 
